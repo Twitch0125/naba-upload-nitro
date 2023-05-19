@@ -1,0 +1,7 @@
+{
+    "lit-html.format.enabled": true,
+    "standard.enable": false,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}

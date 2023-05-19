@@ -1,0 +1,5 @@
+node_modules
+.nitro
+.git
+.output
+site
