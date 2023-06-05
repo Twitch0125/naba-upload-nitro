@@ -11,4 +11,7 @@ export default defineNitroConfig({
       base: 'site'
     },
   },
+  runtimeConfig:{
+    AUTH_PASSWORD: process.env.AUTH_PASSWORD
+  }
 });
