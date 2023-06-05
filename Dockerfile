@@ -10,5 +10,5 @@ RUN pnpm build
 FROM docker.io/node:18-alpine
 WORKDIR /app
 COPY --from=builder /app/.output /app
-
+EXPOSE 3000
 CMD ["node", "./server/index.mjs"]

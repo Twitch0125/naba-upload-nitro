@@ -7,23 +7,27 @@ export function Upload(props = {}) {
   return html`
     <${DefaultLayout}>
       <form
-        x-data="{file: null}"
+        x-data="{file: null, loading: false}"
         action="/upload"
         method="POST"
         enctype="multipart/form-data"
+        @submit="loading=true"
       >
-        ${ props.message && html`<h2>${props.message}</h2>`}
         <label
-          >Upload report
-          <input
-            x-on:change="file = $event.target.files[0]"
-            id="file"
-            name="file"
-            type="file"
-          />
+          for="file-upload"
+          class="text-sm uppercase font-medium tracking-wide text-primary"
+        >
+          Report Upload
         </label>
-        <${FilePreview} />
-        <button>Submit</button>
+        <div
+          class="mt-2 flex justify-center rounded-lg bg-surface border-color-primary/20 border-1 border-dashed px-6 py-10"
+        >
+          <div class="flow-layout flow-sm">
+            <p class="font-semibold">Upload OOTP Online League Report</p>
+            <${FileUpload} name="file" />
+            ${props.message && html`<p>${props.message}</p>`}
+          </div>
+        </div>
       </form>
     <//>
   `;

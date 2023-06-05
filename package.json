@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "npx nitropack dev",
     "build": "npx nitropack build",
-    "preview": "node .output/server/index.mjs"
+    "preview": "node .output/server/index.mjs",
+    "uno": "unocss -c uno.config.ts --watch"
   },
   "dependencies": {
     "htm": "^3.1.1",
@@ -12,6 +13,12 @@
     "vhtml": "^2.2.0"
   },
   "devDependencies": {
-    "@types/mime-types": "^2.1.1"
+    "@iconify-json/svg-spinners": "^1.1.1",
+    "@iconify-json/tabler": "^1.1.74",
+    "@julr/unocss-preset-forms": "^0.0.5",
+    "@types/mime-types": "^2.1.1",
+    "@unocss/preset-icons": "^0.51.8",
+    "@unocss/transformer-variant-group": "^0.51.8",
+    "unocss": "^0.51.8"
   }
 }

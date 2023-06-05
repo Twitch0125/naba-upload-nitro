@@ -13,8 +13,9 @@ export default defineEventHandler(async (event) => {
       });
     }
     const file = body[0];
-    await extractSite(file.data);
-    return Upload({ message: "Success!" });
+    await useStorage().setItemRaw(`site/report.tar.gz`, file.data);
+    await extractSite(await useStorage().getItemRaw(`site/report.tar.gz`));
+    return Upload({ message: "Upload successful!" });
   } catch (err) {
     throw err;
   }

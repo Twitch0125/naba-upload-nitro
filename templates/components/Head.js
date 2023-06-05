@@ -7,7 +7,7 @@ export function Head() {
       <title>Document</title>
       <link
         rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+        href="/uno.css"
       />
       <script src="https://unpkg.com/htmx.org@1.9.2"></script>
       <script
