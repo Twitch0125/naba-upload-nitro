@@ -7,11 +7,11 @@ export default defineNitroConfig({
   handlers: [{ handler: "file_server/index.js", route: "/**" }],
   storage: {
     site: {
-      driver: 'fs',
-      base: 'site'
+      driver: "fs",
+      base: "site",
     },
   },
-  runtimeConfig:{
-    AUTH_PASSWORD: process.env.AUTH_PASSWORD
-  }
+  runtimeConfig: {
+    AUTH_PASSWORD: process.env.AUTH_PASSWORD,
+  },
 });

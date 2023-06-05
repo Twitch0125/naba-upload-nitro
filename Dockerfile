@@ -1,4 +1,5 @@
 FROM docker.io/node:18-alpine as builder
+ENV AUTH_PASSWORD=test
 WORKDIR /app
 RUN corepack enable pnpm
 COPY pnpm-lock.yaml ./
