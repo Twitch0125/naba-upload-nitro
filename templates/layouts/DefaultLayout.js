@@ -2,7 +2,7 @@ export function DefaultLayout(props) {
   return `<!DOCTYPE html>` + html`
     <html lang="en">
       <${Head} />
-      <body hx-boost="true" class="font-sans">
+      <body>
         ${props.children}
       </body>
     </html>
