@@ -3,31 +3,27 @@
  * @param {{message: string}} props
  * @returns {string}
  */
-export function Upload(props = {}) {
+export function Upload(props = { message: "" }) {
   return html`
     <${DefaultLayout}>
       <form
-        x-data="{file: null, loading: false}"
-        action="/upload"
+        name="upload"
+        class="stack"
         method="POST"
         enctype="multipart/form-data"
-        @submit="loading=true"
       >
-        <label
-          for="file-upload"
-          class="text-sm uppercase font-medium tracking-wide text-primary"
-        >
-          Report Upload
-        </label>
-        <div
-          class="mt-2 flex justify-center rounded-lg bg-surface border-color-primary/20 border-1 border-dashed px-6 py-10"
-        >
-          <div class="flow-layout flow-sm">
-            <p class="font-semibold">Upload OOTP Online League Report</p>
-            <${FileUpload} name="file" />
-            ${props.message && html`<p>${props.message}</p>`}
-          </div>
+        <div class="stack">
+          <h1>Upload the zip file here.</h1>
+          <p>It might take several minutes</p>
+          <label>
+            File
+            <input required name="file" type="file" />
+            <div id="file_preview"></div>
+          </label>
         </div>
+        <button name="upload_button" class="fit-content">Upload</button>
+        <div>${props.message && html`<p>${props.message}</p>`}</div>
+        <a href="/">Go home</a>
       </form>
     <//>
   `;
