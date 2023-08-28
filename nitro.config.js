@@ -12,6 +12,7 @@ export default defineNitroConfig({
     },
   },
   runtimeConfig: {
-    AUTH_PASSWORD: process.env.AUTH_PASSWORD,
+    AUTH_PASSWORD: process.env.AUTH_PASSWORD || 'password',
+    AUTH_USERNAME: process.env.AUTH_USERNAME || 'admin',
   },
 });

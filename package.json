@@ -10,17 +10,17 @@
   "dependencies": {
     "htm": "^3.1.1",
     "mime-types": "^2.1.35",
-    "nitropack": "latest",
+    "nitropack": "^2.6.2",
     "vhtml": "^2.2.0"
   },
   "devDependencies": {
-    "@iconify-json/svg-spinners": "^1.1.1",
-    "@iconify-json/tabler": "^1.1.79",
+    "@iconify-json/svg-spinners": "^1.1.2",
+    "@iconify-json/tabler": "^1.1.89",
     "@julr/unocss-preset-forms": "^0.0.5",
     "@types/mime-types": "^2.1.1",
-    "@unocss/preset-icons": "^0.53.3",
-    "@unocss/transformer-variant-group": "^0.53.3",
-    "h3": "^1.7.0",
-    "unocss": "^0.53.3"
+    "@unocss/preset-icons": "^0.53.6",
+    "@unocss/transformer-variant-group": "^0.53.6",
+    "h3": "^1.8.1",
+    "unocss": "^0.53.6"
   }
 }
