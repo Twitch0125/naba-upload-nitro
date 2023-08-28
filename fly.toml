@@ -4,7 +4,7 @@
 #
 
 app = "naba-upload"
-primary_region = "ord"
+primary_region = "den"
 kill_signal = "SIGINT"
 kill_timeout = "5s"
 
