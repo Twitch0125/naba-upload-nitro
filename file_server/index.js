@@ -10,7 +10,6 @@ export default eventHandler(async (event) => {
     "Content-Type",
     contentType(fileExt) || "text/plain"
   );
-  setResponseHeader(event, "Cache-Control", "max-age=600")
   if (path === "/") {
     return sendRedirect(event, "/index.html");
   }
@@ -18,5 +17,6 @@ export default eventHandler(async (event) => {
   if (!item) {
     return "404 not found";
   }
+  setResponseHeader(event, "Cache-Control", "max-age=600");
   return sendStream(event, Readable.from(item));
 });

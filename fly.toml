@@ -1,15 +1,21 @@
-# fly.toml app configuration file generated for naba-dump-nitro on 2023-06-05T12:28:27-06:00
+# fly.toml app configuration file generated for naba-upload on 2023-08-27T22:34:39-06:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "naba-dump-nitro"
+app = "naba-upload"
 primary_region = "ord"
 kill_signal = "SIGINT"
 kill_timeout = "5s"
 
 [experimental]
   auto_rollback = true
+
+[build]
+
+[mounts]
+  source = "naba_upload_data"
+  destination = "/app/site"
 
 [[services]]
   protocol = "tcp"
@@ -33,4 +39,3 @@ kill_timeout = "5s"
     interval = "15s"
     timeout = "2s"
     grace_period = "1s"
-    restart_limit = 0
